@@ -1,0 +1,7 @@
+# Prebuilt binaries — add manually
+prebuilt/*.img
+
+# Editor files
+.vscode/
+*.swp
+*~
