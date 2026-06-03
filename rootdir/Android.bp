@@ -1,0 +1,390 @@
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// ── Init binary ──────────────────────────────────────────────
+sh_binary {
+    name: "init.insmod.sh",
+    src: "bin/init.insmod.sh",
+    vendor: true,
+}
+
+// ── fstab ────────────────────────────────────────────────────
+prebuilt_etc {
+    name: "fstab.ums9230",
+    src: "etc/fstab.ums9230",
+    vendor: true,
+}
+
+// ── Device & SoC specific init (init/hw) ─────────────────────
+prebuilt_etc {
+    name: "init.X669.rc",
+    src: "etc/init.X669.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.X669.usb.rc",
+    src: "etc/init.X669.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ums9230_1h10.rc",
+    src: "etc/init.ums9230_1h10.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ums9230_1h10.usb.rc",
+    src: "etc/init.ums9230_1h10.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ram.rc",
+    src: "etc/init.ram.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.storage.rc",
+    src: "etc/init.storage.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.cali.rc",
+    src: "etc/init.cali.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.factorytest.rc",
+    src: "etc/init.factorytest.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+// ── Vendor HAL service init files (init/) ────────────────────
+prebuilt_etc {
+    name: "android.hardware.audio.service.rc",
+    src: "etc/android.hardware.audio.service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.biometrics.fingerprint@2.1-service.rc",
+    src: "etc/android.hardware.biometrics.fingerprint@2.1-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.bluetooth@1.1-service.unisoc.rc",
+    src: "etc/android.hardware.bluetooth@1.1-service.unisoc.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.camera.provider@2.4-service.rc",
+    src: "etc/android.hardware.camera.provider@2.4-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.cas@1.2-service.rc",
+    src: "etc/android.hardware.cas@1.2-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.drm@1.4-service.clearkey.rc",
+    src: "etc/android.hardware.drm@1.4-service.clearkey.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.drm@1.4-service.widevine.rc",
+    src: "etc/android.hardware.drm@1.4-service.widevine.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.gatekeeper@1.0-service.trusty.rc",
+    src: "etc/android.hardware.gatekeeper@1.0-service.trusty.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.graphics.allocator@4.0-service.rc",
+    src: "etc/android.hardware.graphics.allocator@4.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.graphics.composer@2.1-service.rc",
+    src: "etc/android.hardware.graphics.composer@2.1-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.health@2.1-service.rc",
+    src: "etc/android.hardware.health@2.1-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.media.c2@1.1-unisoc-service.rc",
+    src: "etc/android.hardware.media.c2@1.1-unisoc-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.media.omx@1.0-service.rc",
+    src: "etc/android.hardware.media.omx@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.security.keymint@1.0-unisoc.service.rc",
+    src: "etc/android.hardware.security.keymint@1.0-unisoc.service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.sensors@1.0-service.rc",
+    src: "etc/android.hardware.sensors@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.usb@1.1-service.rc",
+    src: "etc/android.hardware.usb@1.1-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.wifi.supplicant-service.rc",
+    src: "etc/android.hardware.wifi.supplicant-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.wifi@1.0-service.rc",
+    src: "etc/android.hardware.wifi@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.silead.hardware.fingerprintext@1.0-service.rc",
+    src: "etc/vendor.silead.hardware.fingerprintext@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.silead.rc",
+    src: "etc/vendor.silead.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.ai_engine@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.ai_engine@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.algoservice@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.algoservice@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.aprd@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.aprd@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.boot@1.2-service.rc",
+    src: "etc/vendor.sprd.hardware.boot@1.2-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.broadcastradio@2.0-service.rc",
+    src: "etc/vendor.sprd.hardware.broadcastradio@2.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.connmgr@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.connmgr@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.cplog_svc@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.cplog_svc@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.enhance@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.enhance@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.face@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.face@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.fingerprintmmi@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.fingerprintmmi@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.gnss@2.2-service.rc",
+    src: "etc/vendor.sprd.hardware.gnss@2.2-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.log@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.log@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.network@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.network@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.oemlock@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.oemlock@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.thermal@2.0-service.rc",
+    src: "etc/vendor.sprd.hardware.thermal@2.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.trusty@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.trusty@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sprd.hardware.wcn@1.0-service.rc",
+    src: "etc/vendor.sprd.hardware.wcn@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+// ── Vendor service init files (init/) ────────────────────────
+prebuilt_etc { name: "adbtestmode.rc",          src: "etc/adbtestmode.rc",          sub_dir: "init", vendor: true }
+prebuilt_etc { name: "antiflashing.rc",          src: "etc/antiflashing.rc",          sub_dir: "init", vendor: true }
+prebuilt_etc { name: "autotest.rc",              src: "etc/autotest.rc",              sub_dir: "init", vendor: true }
+prebuilt_etc { name: "boringssl_self_test.rc",   src: "etc/boringssl_self_test.rc",   sub_dir: "init", vendor: true }
+prebuilt_etc { name: "charge.rc",                src: "etc/charge.rc",                sub_dir: "init", vendor: true }
+prebuilt_etc { name: "charged.rc",               src: "etc/charged.rc",               sub_dir: "init", vendor: true }
+prebuilt_etc { name: "connmgr.rc",               src: "etc/connmgr.rc",               sub_dir: "init", vendor: true }
+prebuilt_etc { name: "cp_diskserver.rc",         src: "etc/cp_diskserver.rc",         sub_dir: "init", vendor: true }
+prebuilt_etc { name: "dcxsrv.rc",                src: "etc/dcxsrv.rc",                sub_dir: "init", vendor: true }
+prebuilt_etc { name: "engpc.rc",                 src: "etc/engpc.rc",                 sub_dir: "init", vendor: true }
+prebuilt_etc { name: "factorytest.rc",           src: "etc/factorytest.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "hostapd.android.rc",       src: "etc/hostapd.android.rc",       sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.bootscan.rc",         src: "etc/init.bootscan.rc",         sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.charge.common.rc",    src: "etc/init.charge.common.rc",    sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.dts.common.rc",       src: "etc/init.dts.common.rc",       sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.fpsmgr.rc",           src: "etc/init.fpsmgr.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.itel.common.rc",      src: "etc/init.itel.common.rc",      sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.kfp.rc",              src: "etc/init.kfp.rc",              sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.leddrv.rc",           src: "etc/init.leddrv.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.md.rc",               src: "etc/init.md.rc",               sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.pnpmgr.rc",           src: "etc/init.pnpmgr.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.project.rc",          src: "etc/init.project.rc",          sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.scaler.rc",           src: "etc/init.scaler.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.storage_feature_cloudctl.rc", src: "etc/init.storage_feature_cloudctl.rc", sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.tranlog.rc",          src: "etc/init.tranlog.rc",          sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.tranlogconfig.rc",    src: "etc/init.tranlogconfig.rc",    sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.tran_appm.rc",        src: "etc/init.tran_appm.rc",        sub_dir: "init", vendor: true }
+prebuilt_etc { name: "init.vibdrv.rc",           src: "etc/init.vibdrv.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "lights.rc",                src: "etc/lights.rc",                sub_dir: "init", vendor: true }
+prebuilt_etc { name: "memtrack.rc",              src: "etc/memtrack.rc",              sub_dir: "init", vendor: true }
+prebuilt_etc { name: "modem_control.rc",         src: "etc/modem_control.rc",         sub_dir: "init", vendor: true }
+prebuilt_etc { name: "phasecheckserver.rc",      src: "etc/phasecheckserver.rc",      sub_dir: "init", vendor: true }
+prebuilt_etc { name: "power.stats-default.rc",   src: "etc/power.stats-default.rc",   sub_dir: "init", vendor: true }
+prebuilt_etc { name: "rebootescrow-default.rc",  src: "etc/rebootescrow-default.rc",  sub_dir: "init", vendor: true }
+prebuilt_etc { name: "refnotify.rc",             src: "etc/refnotify.rc",             sub_dir: "init", vendor: true }
+prebuilt_etc { name: "rpmbserver_androidr.rc",   src: "etc/rpmbserver_androidr.rc",   sub_dir: "init", vendor: true }
+prebuilt_etc { name: "slogmodem_vendor.rc",      src: "etc/slogmodem_vendor.rc",      sub_dir: "init", vendor: true }
+prebuilt_etc { name: "srtd.rc",                  src: "etc/srtd.rc",                  sub_dir: "init", vendor: true }
+prebuilt_etc { name: "systemDebuggerd.rc",       src: "etc/systemDebuggerd.rc",       sub_dir: "init", vendor: true }
+prebuilt_etc { name: "tee_rpc.rc",               src: "etc/tee_rpc.rc",               sub_dir: "init", vendor: true }
+prebuilt_etc { name: "thermald.rc",              src: "etc/thermald.rc",              sub_dir: "init", vendor: true }
+prebuilt_etc { name: "tnev.rc",                  src: "etc/tnev.rc",                  sub_dir: "init", vendor: true }
+prebuilt_etc { name: "transsion_storageproxyd_androids.rc", src: "etc/transsion_storageproxyd_androids.rc", sub_dir: "init", vendor: true }
+prebuilt_etc { name: "tsupplicant.rc",           src: "etc/tsupplicant.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "turbocloudservice.rc",     src: "etc/turbocloudservice.rc",     sub_dir: "init", vendor: true }
+prebuilt_etc { name: "turbopower.rc",            src: "etc/turbopower.rc",            sub_dir: "init", vendor: true }
+prebuilt_etc { name: "unisoc.rild.rc",           src: "etc/unisoc.rild.rc",           sub_dir: "init", vendor: true }
+prebuilt_etc { name: "vendor-power-default.rc",  src: "etc/vendor-power-default.rc",  sub_dir: "init", vendor: true }
+prebuilt_etc { name: "vendor_flash_recovery.rc", src: "etc/vendor_flash_recovery.rc", sub_dir: "init", vendor: true }
+prebuilt_etc { name: "vibrator.rc",              src: "etc/vibrator.rc",              sub_dir: "init", vendor: true }
+prebuilt_etc { name: "vndservicemanager.rc",     src: "etc/vndservicemanager.rc",     sub_dir: "init", vendor: true }
+prebuilt_etc { name: "wcn.rc",                   src: "etc/wcn.rc",                   sub_dir: "init", vendor: true }
+prebuilt_etc { name: "yloglite.rc",              src: "etc/yloglite.rc",              sub_dir: "init", vendor: true }
