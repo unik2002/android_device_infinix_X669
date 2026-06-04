@@ -26,11 +26,27 @@ BOARD_USES_UNISOC_HARDWARE := true
 TARGET_BOOTLOADER_BOARD_NAME := infinix-X669
 TARGET_NO_BOOTLOADER := true
 
-# GKI Kernel
+# GKI Kernel (5.4.254-android12-9 — no source available for UMS9230)
 TARGET_NO_KERNEL := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_RAMDISK_USE_LZ4 := true
+
+# Kernel modules — prebuilt
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat \
+    $(DEVICE_PATH)/modules.load))
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat \
+    $(DEVICE_PATH)/modules.load.vendor_boot))
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard \
+    $(DEVICE_PATH)/vendor_dlkm/lib/modules/*.ko)
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard \
+    $(DEVICE_PATH)/vendor/lib/modules/*.ko)
+
+# Prebuilt kernel image
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 # Boot image offsets (verified from device hex dump)
 BOARD_VENDOR_BASE          := 0x00000000
@@ -76,7 +92,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 BOARD_BOOTIMAGE_PARTITION_SIZE := 104857600
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 104857600
 
-# Super partition (verified: 5872025600 bytes)
+# Super partition (verified: blockdev --getsize64 /dev/block/by-name/super)
 BOARD_SUPER_PARTITION_SIZE := 5872025600
 BOARD_SUPER_PARTITION_GROUPS := group_unisoc
 BOARD_GROUP_UNISOC_PARTITION_LIST := system system_ext product vendor vendor_dlkm
@@ -118,7 +134,7 @@ BOARD_USES_METADATA_PARTITION := true
 # Display
 TARGET_SCREEN_DENSITY := 400
 
-# Security patch (verified from device)
+# Security patch (verified from device: getprop ro.build.version.security_patch)
 PLATFORM_SECURITY_PATCH      := 2025-02-05
 VENDOR_SECURITY_PATCH        := 2025-02-05
 PLATFORM_VERSION             := 12
